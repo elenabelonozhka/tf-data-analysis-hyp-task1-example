@@ -16,7 +16,7 @@ def solution(x_success: int,
              y_cnt: int) -> bool:
  
 p = proportions_ztest([x_success, y_success], [x_cnt, y_cnt], alternative=‘smaller’)[1] 
-if p > 0.08:
+if p < 0.08:
   return True
 else:
   return False
